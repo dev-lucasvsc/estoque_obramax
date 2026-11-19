@@ -226,7 +226,7 @@ button .k { float: right; font-family: var(--font-mono); font-size: 11px; color:
 
   [-1, 1].forEach(function (side) {
     for (var i = 0; i < 5; i++) {
-      var rackNo = (side < 0 ? 0 : 5) + i + 1;
+      var rackNo = side < 0 ? 2 * (i + 1) : 2 * i + 1;
       var g = new THREE.Group();
       g.position.set(side * (AISLE / 2 + DEPTH / 2), 0, 13.2 - i * STEP);
       g.rotation.y = side < 0 ? Math.PI / 2 : -Math.PI / 2;
